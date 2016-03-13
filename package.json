@@ -1,0 +1,18 @@
+{
+  "name": "last25tweets",
+  "version": "1.0.0",
+  "description": "Example app that consumes the Twitter API to display the time & content of the last 25 tweets for any given Twitter handle.",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node --harmony server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "co-views": "^2.1.0",
+    "koa": "^1.2.0",
+    "koa-route": "^2.4.2"
+  }
+}
