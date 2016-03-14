@@ -6,6 +6,7 @@ const handlebars = require('koa-handlebars');
 
 app.use(handlebars({
     extension: ['hbs', 'handlebars'],
+    defaultLayout: 'index',
     layoutsDir: 'app/templates',
     viewsDir: 'app/templates/views',
     partialsDir: 'app/templates/partials'
