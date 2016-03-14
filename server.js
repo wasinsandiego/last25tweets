@@ -13,6 +13,7 @@ app.use(handlebars({
 }));
 
 const routes = require('./app/routes')(app).next();
+const port = process.env.PORT || 5000;
 
-app.listen(3000);
-console.log('Koa listening on port 3000');
+app.listen(port);
+console.log('Koa listening on port ' + port);
