@@ -2,7 +2,6 @@
 
 const koa = require('koa');
 const app = koa();
-const webpackDevServer = require('koa-webpack-dev');
 const handlebars = require('koa-handlebars');
 const serve = require('koa-static');
 
@@ -17,6 +16,7 @@ app.use(handlebars({
 }));
 
 if (process.env.NODE_ENV !== 'production') {
+  var webpackDevServer = require('koa-webpack-dev');
   app.use(webpackDevServer({
       config: './webpack.config.js'
   }));
