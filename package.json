@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "build": "webpack",
-    "start": "`npm bin`/webpack-dev-server --hot --inline & `npm bin`/supervisor -e 'js|coffee|json|hbs' -w 'app' -p 250 --no-restart-on exit --harmony server.js"
+    "start": "`npm bin`/webpack-dev-server --hot --inline & `npm bin`/supervisor -e 'js|coffee|json|hbs' -w 'app' -p 250 --no-restart-on exit --harmony server.js",
+    "heroku-postbuild": "npm run build"
   },
   "engines": {
     "node": "5.8.0"

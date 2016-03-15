@@ -16,9 +16,11 @@ app.use(handlebars({
     partialsDir: 'app/templates/partials'
 }));
 
-app.use(webpackDevServer({
-    config: './webpack.config.js'
-}));
+if (process.env.NODE_ENV !== 'production') {
+  app.use(webpackDevServer({
+      config: './webpack.config.js'
+  }));
+}
 
 const routes = require('./app/routes')(app).next();
 const port = process.env.PORT || 5000;

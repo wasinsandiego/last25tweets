@@ -1,7 +1,7 @@
 module.exports = function () {
   var element = document.createElement('h1');
 
-  element.innerHTML = 'Last 25 Tweets.';
+  element.innerHTML = 'LAST 25 TWEETS';
 
   return element;
 };
