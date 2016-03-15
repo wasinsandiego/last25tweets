@@ -8,4 +8,3 @@ module.exports = function *routes(app) {
   app.use(route.get('/', controllers.index));
 
 };
-

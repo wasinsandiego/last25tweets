@@ -5,13 +5,13 @@
     <meta charset="utf-8">
 
     <title>Last 25 Tweets</title>
-    <meta name="description" content="The HTML5 Herald">
-
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <meta name="description" content="Example app that consumes the Twitter API to display the time &amp; content of the last 25 tweets for any given Twitter handle.">
 
   </head>
 
   <body>
+    <div id="app"></div>
+    <script src="http://localhost:8080/bundle.js"></script>
     {{{ @body }}}
     <script>window.twttr = (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0],

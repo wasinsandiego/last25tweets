@@ -2,7 +2,11 @@
 
 const koa = require('koa');
 const app = koa();
+const webpackDevServer = require('koa-webpack-dev');
 const handlebars = require('koa-handlebars');
+const serve = require('koa-static');
+
+app.use(serve(__dirname + '/public'));
 
 app.use(handlebars({
     extension: ['hbs', 'handlebars'],
@@ -10,6 +14,10 @@ app.use(handlebars({
     layoutsDir: 'app/templates',
     viewsDir: 'app/templates/views',
     partialsDir: 'app/templates/partials'
+}));
+
+app.use(webpackDevServer({
+    config: './webpack.config.js'
 }));
 
 const routes = require('./app/routes')(app).next();

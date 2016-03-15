@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <!--
      Preview a GitHub README.md.
-
      Either:
-
      -  Copy this file to a directory that contains repo directories,
         and then specify a repo name in the query string.
-
         For example:
-
           http://localhost/github/readme.html?myrepo
-
      or
-
      -  Copy this file to the directory that contains a README.md,
         and then browse to this file without specifying a query string.
-
         For example:
-
           http://localhost/github/myrepo/readme.html
-
         (or just open this file in your browser directly from
         your file system, without HTTP)
 -->
@@ -36,17 +27,13 @@
 var HTTP_STATUS_OK = 200;
 var URL_API_GITHUB_RENDER_MARKDOWN = "https://api.github.com/markdown/raw";
 var README_FILE_NAME = "README.md";
-
 var readmeURL;
-
 var queryString = location.search.substring(1);
-
 if (queryString.length > 0) {
   readmeURL = queryString + "/" + README_FILE_NAME;
 } else {
   readmeURL = README_FILE_NAME;
 }
-
 // Get Markdown, then render it as HTML
 function getThenRenderMarkdown(markdownURL) {
   var xhr = new XMLHttpRequest();
@@ -60,7 +47,6 @@ function getThenRenderMarkdown(markdownURL) {
   }
   xhr.send();
 }
-
 // Use the GitHub API to render Markdown as HTML
 function renderMarkdown(markdown) {
   var xhr = new XMLHttpRequest();
@@ -73,7 +59,6 @@ function renderMarkdown(markdown) {
   }
   xhr.send(markdown);
 }
-
 window.onload = function() {
   getThenRenderMarkdown(readmeURL);
 }
