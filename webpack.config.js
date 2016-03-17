@@ -29,14 +29,14 @@ module.exports = {
         loaders: ['style', 'css'],
         include: PATHS.app
       }
-      // ,{
-      //   test: /\.jsx?$/,
-      //   loader: 'babel',
-      //   include: PATHS.app,
-      //   query: {
-      //     presets: ['react', 'es2015']
-      //   }
-      // }
+      ,{
+        test: /\.jsx?$/,
+        loader: 'babel',
+        include: PATHS.app,
+        query: {
+          presets: ['react', 'es2015']
+        }
+      }
     ]
   },
   devServer: {

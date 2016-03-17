@@ -36,7 +36,7 @@ controller.userTimeline = function *userTimeline(screenName) {
         url: 'https://api.twitter.com/1.1/statuses/user_timeline.json'
         ,qs: {
           count: 25
-          ,screen_name: '99piorg'
+          ,screen_name: screenName || '99piorg'
         }
         ,headers: {
           'method': 'GET'
