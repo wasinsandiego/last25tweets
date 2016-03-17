@@ -6,13 +6,17 @@ const request = require('koa-request');
 const config = require('./config');
 const twitterBearerCreds = new Buffer(encodeURIComponent(config.twitter.apiKey) + ':' + encodeURIComponent(config.twitter.apiSecret)).toString('base64');
 
+// -------------------------------------------
+//  page controllers
+// -------------------------------------------
 controller.index = function *index() {
   yield this.render('home', { base: basePath, description: 'Hello :)' });
 };
 
 
-
-
+// -------------------------------------------
+//  api controllers
+// -------------------------------------------
 controller.userTimeline = function *userTimeline(screenName) {
 
   var options = {
@@ -26,8 +30,26 @@ controller.userTimeline = function *userTimeline(screenName) {
   },
   response = yield request.post(options),
   info = JSON.parse(response.body);
-  
-  this.body = info;
+
+  if (info.token_type === 'bearer') {
+    options = {
+        url: 'https://api.twitter.com/1.1/statuses/user_timeline.json'
+        ,qs: {
+          count: 25
+          ,screen_name: '99piorg'
+        }
+        ,headers: {
+          'method': 'GET'
+          ,'authorization': 'Bearer ' + info.access_token
+        }
+    };
+    response = yield request.get(options),
+    info = response.body;
+    
+    this.body = info;
+  } else if (info && info.token_type !== 'bearer') {
+    this.throw(440);
+  }
 
 };
 
