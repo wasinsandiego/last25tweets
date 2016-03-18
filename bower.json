@@ -1,0 +1,23 @@
+{
+  "name": "last25tweets",
+  "description": "Example app that consumes the Twitter API to display the time & content of the last 25 tweets for any given Twitter handle.",
+  "main": "server.js",
+  "authors": [
+    "Will Schoenberger <will.schoenberger@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "frontend/js/libs/",
+    "public",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6"
+  }
+}

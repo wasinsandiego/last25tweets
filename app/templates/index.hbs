@@ -6,13 +6,13 @@
 
     <title>Last 25 Tweets</title>
     <meta name="description" content="Example app that consumes the Twitter API to display the time &amp; content of the last 25 tweets for any given Twitter handle.">
-
+    
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   </head>
 
   <body>
-    <div id="app"></div>
-    <script src="{{base}}/bundle.js"></script>
     {{{ @body }}}
+    {{!-- 
     <script>window.twttr = (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0],
         t = window.twttr || {};
@@ -29,5 +29,6 @@
      
       return t;
     }(document, "script", "twitter-wjs"));</script>
+    --}}
   </body>
 </html>

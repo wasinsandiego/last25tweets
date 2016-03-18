@@ -1,3 +1,77 @@
 body {
   background: #e1e1e1;
 }
+
+
+h1, .h1 {
+  font-size: 28px;
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+  h1, .h1 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 922px) {
+  h1, .h1 {
+    font-size: 36px;
+  }
+}
+
+
+
+
+
+
+
+.page-hero {
+  position: relative;
+  padding-bottom: 50%;
+  /*background-image: url('https://pbs.twimg.com/profile_banners/15846407/1455554834/1500x500');*/
+  background-image: url('http://amazingtile.info/wp-content/uploads/2016/02/wood-floor-background-tumblr.jpg');
+  background-size: cover;
+}
+
+.page-title,
+.screen-name-form-cont {
+  position: absolute;
+  color: #FFF;
+}
+
+.page-title {
+  width: 100%;
+  margin: 0;
+  top: 4vw;
+  text-align: center;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.3), 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.screen-name-form-cont {
+  position: absolute;
+  width: 100%;
+  max-width: 360px;
+  top: calc(50% + 17px);
+  left: 50%;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.screen-name-form-cont .form-group {
+  width: calc(100% - 70px);
+  display: inline-block;
+}
+
+
+@media (min-width: 768px) {
+  h1, .h1 {
+    font-size: 32px;
+  }
+}

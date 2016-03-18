@@ -4,9 +4,8 @@ var React = require('react')
 module.exports = function() {
 
     return (
-      <div className="page-hero">
-        <h1 className="page-title">LAST 25 TWEETS</h1>
-        <ScreenNameForm />
+      <div className="container-fluid user-timeline-cont">
+        <h2>Users timeline...</h2>
       </div>
     );
 

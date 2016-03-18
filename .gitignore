@@ -4,4 +4,5 @@
 *.sublime*
 npm-debug.log
 node_modules
+frontend/libs
 *.pid
