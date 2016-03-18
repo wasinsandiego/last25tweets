@@ -7,7 +7,7 @@
   "scripts": {
     "build": "`npm bin`/webpack",
     "start": "`npm bin`/webpack-dev-server --hot --inline & `npm bin`/supervisor -e 'js|coffee|json|hbs' -w 'app' -p 250 --no-restart-on exit --harmony server.js",
-    "postinstall": "`npm bin`/bower install"
+    "postinstall": "`npm bin`/bower install && npm run build"
   },
   "engines": {
     "node": "5.8.0"
