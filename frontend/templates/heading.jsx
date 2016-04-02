@@ -1,4 +1,4 @@
-var React = require('react')
+let React = require('react')
     ,ScreenNameForm = require('./../js/components/property.screen-name-form');
 
 module.exports = function() {
