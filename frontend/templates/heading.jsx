@@ -1,5 +1,5 @@
-let React = require('react')
-    ,ScreenNameForm = require('./../js/components/property.screen-name-form');
+const React = require('react')
+      , ScreenNameForm = require('./../js/components/property.screen-name-form');
 
 module.exports = function() {
 

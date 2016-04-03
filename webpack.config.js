@@ -1,15 +1,13 @@
-var path = require('path');
-// var HtmlwebpackPlugin = require('html-webpack-plugin');
-var webpack = require('webpack');
+const path = require('path')
+      // , HtmlwebpackPlugin = require('html-webpack-plugin');
+      , webpack = require('webpack')
+      , PATHS = {
+          frontend: path.join(__dirname, 'frontend'),
+          public: path.join(__dirname, 'public')
+      }
+      , TARGET = process.env.npm_lifecycle_event;
 
-const PATHS = {
-    frontend: path.join(__dirname, 'frontend'),
-    public: path.join(__dirname, 'public')
-};
-
-const TARGET = process.env.npm_lifecycle_event;
-process.env.BABEL_ENV = TARGET
-
+process.env.BABEL_ENV = TARGET;
 module.exports = {
   entry: {
     'main.js': path.join(__dirname, 'frontend/js/main.js')

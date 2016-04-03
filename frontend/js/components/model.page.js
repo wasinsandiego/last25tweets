@@ -1,7 +1,7 @@
 let Page
-    ,React = require('react')
-    ,template = require('./../../templates/page.jsx')
-    ,dummyData = require('./../dummy-data');
+    , React = require('react')
+    , template = require('./../../templates/page.jsx')
+    , dummyData = require('./../dummy-data');
 
 module.exports = Page = React.createClass({
 

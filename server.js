@@ -1,12 +1,12 @@
 'use strict';
 
-const koa = require('koa');
-const app = koa();
-const json = require('koa-json');
-const serve = require('koa-static');
-const handlebars = require('koa-handlebars');
-const bodyParser = require('koa-bodyparser');
-const statuses = require('statuses');
+const koa = require('koa')
+      , app = koa()
+      , json = require('koa-json')
+      , serve = require('koa-static')
+      , handlebars = require('koa-handlebars')
+      , bodyParser = require('koa-bodyparser')
+      , statuses = require('statuses');
 
 // -------------------------------------------
 //  custom status codes
@@ -54,7 +54,7 @@ app.use(handlebars({
 }));
 // webpack dev server for LOCAL DEV ONLY
 if (process.env.NODE_ENV !== 'production') {
-  var webpackDevServer = require('koa-webpack-dev');
+  let webpackDevServer = require('koa-webpack-dev');
   app.use(webpackDevServer({
       config: './webpack.config.js'
   }));
@@ -64,10 +64,9 @@ if (process.env.NODE_ENV !== 'production') {
 //  init app
 // -------------------------------------------
 
-// initialize routes
-const routes = require('./app/routes')(app).next();
+// initialize routes, set port
+const routes = require('./app/routes')(app).next()
+      , port = process.env.PORT || 5000;
 
-// boom
-const port = process.env.PORT || 5000;
 app.listen(port);
 console.log('Koa listening on port ' + port);

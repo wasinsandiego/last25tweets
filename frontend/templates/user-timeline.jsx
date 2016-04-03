@@ -1,5 +1,5 @@
-let React = require('react')
-    ,UserTweet = require('./../js/components/property.user-tweet');
+const React = require('react')
+      , UserTweet = require('./../js/components/property.user-tweet');
 
 module.exports = function() {
 

@@ -1,4 +1,4 @@
-let React = require('react');
+const React = require('react');
 
 module.exports = function() {
 

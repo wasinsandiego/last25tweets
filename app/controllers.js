@@ -19,7 +19,7 @@ controller.index = function *index() {
 // -------------------------------------------
 controller.userTimeline = function *userTimeline(screenName) {
 
-  var options = {
+  let options = {
       url: 'https://api.twitter.com/oauth2/token'
       ,'body': 'grant_type=client_credentials'
       ,headers: {
