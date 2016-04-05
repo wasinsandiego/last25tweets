@@ -10,7 +10,7 @@ module.exports = Page = React.createClass({
   }
 
   , getInitialState: function() {
-    return { data: { screenName: 'GameOfThrones', tweets: [dummyData[0]] } };
+    return { data: { screenName: 'GameOfThrones', tweets: dummyData } };
   }
   
   , componentDidMount: function() {

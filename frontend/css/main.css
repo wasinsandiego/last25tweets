@@ -2,40 +2,83 @@ body {
   background: #e1e1e1;
 }
 
-
-h1, .h1 {
-  font-size: 28px;
+/* because react seems to make spans for the fun of it */
+span {
+  vertical-align: top;
 }
 
 
 
+/*-------------------------------------
+  typography
+-------------------------------------*/
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 
+a, a:hover {
+  text-decoration: none;
+}
 
+a:hover {
+  color: #49ABFF;
+}
+
+h1, .h1 {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+h2, .h2 {
+  font-size: 22px;
+}
+
+h3, .h3 {
+  font-size: 18px;
+}
 
 @media (min-width: 768px) {
   h1, .h1 {
-    font-size: 32px;
+    font-size: 36px;
+  }
+
+  h2, .h2 {
+    font-size: 26px;
+  }
+
+  h3, .h3 {
+    font-size: 22px;
   }
 }
 
 @media (min-width: 922px) {
   h1, .h1 {
-    font-size: 36px;
+    font-size: 40px;
+  }
+
+  h2, .h2 {
+    font-size: 30px;
   }
 }
 
 
 
 
-
-
-
+/*-------------------------------------
+  hero
+-------------------------------------*/
 .page-hero {
   position: relative;
-  padding-bottom: 50%;
+  padding-bottom: 60%;
   /*background-image: url('https://pbs.twimg.com/profile_banners/15846407/1455554834/1500x500');*/
   background-image: url('http://amazingtile.info/wp-content/uploads/2016/02/wood-floor-background-tumblr.jpg');
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .page-hero {
+    padding-bottom: 50%;
+  }
 }
 
 .page-title,
@@ -70,8 +113,52 @@ h1, .h1 {
 }
 
 
-@media (min-width: 768px) {
-  h1, .h1 {
-    font-size: 32px;
-  }
+
+
+/*-------------------------------------
+  timeline
+-------------------------------------*/
+.user-timeline-tweets {
+  margin: 20px 0;
+}
+
+.user-tweet-cont {
+  padding: 20px;
+  margin: 5px 0;
+  background-color: #FFF;
+  border-radius: 5px;
+  border: solid 1px #CCCCCC;
+}
+
+.user-info {
+  display: inline-block;
+}
+
+.user-avatar {
+  padding-right: 8px;
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+}
+
+.user-screen-name {
+  margin-top: -4px;
+}
+
+.user-tweet {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #FBFBFF;
+  border-radius: 4px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.media-image {
+  width: 100%;
 }

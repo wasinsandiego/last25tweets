@@ -6,7 +6,6 @@ module.exports = function() {
 
     return (
       <main>
-        <h3>{ this.state.data.screenName }</h3>
         <Heading />
         <UserTimeline data={ this.state.data } />
 
