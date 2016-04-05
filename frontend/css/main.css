@@ -63,6 +63,15 @@ h3, .h3 {
 
 
 
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
 
 /*-------------------------------------
   hero
@@ -71,7 +80,7 @@ h3, .h3 {
   position: relative;
   padding-bottom: 60%;
   /*background-image: url('https://pbs.twimg.com/profile_banners/15846407/1455554834/1500x500');*/
-  background-image: url('http://amazingtile.info/wp-content/uploads/2016/02/wood-floor-background-tumblr.jpg');
+  background-image: url('/img/default-bg.jpg');
   background-size: cover;
 }
 

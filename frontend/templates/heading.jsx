@@ -6,7 +6,7 @@ module.exports = function() {
     return (
       <div className="page-hero">
         <h1 className="page-title">LAST 25 TWEETS</h1>
-        <ScreenNameForm />
+        <ScreenNameForm onSubmit={ this.props.onSubmit }/>
       </div>
     );
 
