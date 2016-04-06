@@ -48,7 +48,7 @@ module.exports = {
       host: '127.0.0.1'
   },
   proxy: {
-    "*": "http://localhost:8080"
+    '*': 'http://localhost:8080'
   },
   plugins: [
       new webpack.HotModuleReplacementPlugin()
