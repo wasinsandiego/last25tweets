@@ -79,8 +79,8 @@ h3, .h3 {
 .page-hero {
   position: relative;
   padding-bottom: 60%;
-  background-image: url('https://pbs.twimg.com/profile_banners/15846407/1455554834/1500x500');
-  /*background-image: url('/img/default-bg.jpg');*/
+  /*background-image: url('https://pbs.twimg.com/profile_banners/15846407/1455554834/1500x500');*/
+  background-image: url('http://amazingtile.info/wp-content/uploads/2016/02/wood-floor-background-tumblr.jpg');
   background-size: cover;
 }
 
