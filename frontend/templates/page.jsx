@@ -6,7 +6,7 @@ module.exports = function() {
 
     return (
       <main>
-        <Heading onSubmit={ this.submitScreenName }/>
+        <Heading onSubmit={ this.submitScreenName } profileImage={ this.state.data.profileImage }/>
         <UserTimeline data={ this.state.data } />
 
       </main>
